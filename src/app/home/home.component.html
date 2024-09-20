@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <dir class="row">
+@for (data of lus; track $index) {
+    <div class="col-4 p-3">
+
+    <div class="p-3 card-body border border-black">
+<div class="card-img mb-5">
+<img [src]="data.image" class="w-100" alt="">
+</div>
+<h3 class="h5">Title:{{data.title.split("",5).join('')}}</h3>
+<h4 class="h5 small">Category: {{data.category}}</h4>
+<div class="d-flex justify-content-between p-3 mb-5 card-footer">
+<span>Price: {{data.price}}</span>
+<i class="fa fa-star text-warning "><span class="text-black">{{data.rating.rate}}</span></i>
+</div>
+</div>
+    </div>
+}
+    </dir>
+</div>
